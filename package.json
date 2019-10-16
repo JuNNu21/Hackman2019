@@ -1,0 +1,28 @@
+{
+  "name": "skillmithra-auth",
+  "version": "0.0.1",
+  "description": "skillmithra authentication server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "better-xlsx": "^0.7.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "instamojo": "^1.0.1",
+    "instamojo-nodejs": "^0.0.5",
+    "mongoose": "^5.2.15",
+    "mongoose-unique-validator": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "url": "^0.11.0"
+  },
+  "engines": {
+    "node": "10.x.x"
+  },
+  "license": "MIT"
+}

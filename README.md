@@ -1,11 +1,12 @@
-TODO
+TODO:
+=============
 
-# BACKEND
+## BACKEND
 
 > Registration form 
 
 > payment method
 
-# Frontend
+## Frontend
 
->
+> change theme

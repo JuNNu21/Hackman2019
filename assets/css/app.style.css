@@ -13,7 +13,7 @@ li a {
 }
 
 a {
-  color: teal;
+  color: #32D010;
   text-decoration: none;
 }
 a,
@@ -26,18 +26,18 @@ a:focus {
   text-decoration: none;
 }
 a:hover {
-  color: teal;
+  color: #32D010;
   text-decoration: underline;
 }
 
 /* Default highlight color */
 ::-moz-selection {
   color: #fff;
-  background: teal;
+  background: #32D010;
 }
 ::selection {
   color: #fff;
-  background: teal;
+  background: #32D010;
 }
 
 .btn-u-upper {
@@ -82,8 +82,8 @@ a:hover {
 	}
 }
 
-.g-color-default { color: teal;}
-.g-bg-default { background: teal;}
+.g-color-default { color: #32D010;}
+.g-bg-default { background: #32D010;}
 
 .g-color-white { color: #fff !important;}
 
@@ -275,7 +275,7 @@ a:hover {
 	display: block;
 }
 .g-heading-v10 h2 .block-name span {
-	color: teal;
+	color: #32D010;
 }
 .g-heading-v10 p {
 	margin: 0 auto;
@@ -289,7 +289,7 @@ a:hover {
 }
 
 .container-fluid.with-bg-2 {
-	background: teal;
+	background: #32D010;
 }
 
 /* --------------------------------------------------
@@ -350,7 +350,7 @@ a:hover {
 }
 
 .homeapp-header.one-page-header .navbar-nav > li > a:hover {
-	color: teal;
+	color: 	#32D010;
 }
 
 .homeapp-header.one-page-header .navbar-nav > .active > a,
@@ -358,20 +358,20 @@ a:hover {
 .homeapp-header.one-page-header .navbar-nav > .active > a:focus {
     z-index: 1;
     background: transparent none repeat scroll 0% 0%;
-    color: teal !important;
+    color: #32D010 !important;
 }
 
 /* Designing the button */
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u {
 	margin-left: 13px;
 	color: #fff;
-	background: teal;
+	background: #32D010;
 }
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u:hover,
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u:focus,
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u:active,
 .homeapp-header.one-page-header .navbar-nav > li > a.btn-u.active {
-	background: teal;
+	background: #32D010;
 	color: #fff;
 }
 
@@ -504,7 +504,7 @@ a:hover {
 }
 
 .btn-u.btn-banner.btn-apple {
-	background: teal;
+	background: #32D010;
 	 position: relative;
 
 }
@@ -614,7 +614,7 @@ a:hover {
 }
 
 .benefit .fa {
-	color: teal;
+	color: #32D010;
 	margin: 0 0 30px;
 }
 
@@ -648,7 +648,7 @@ a:hover {
 /* Designing the play button */
 .our-presentation .btn-u.btn-play {
 	border-radius: 50%;
-	background: teal;
+	background: #32D010;
 	font-size: 12px;
 	padding: 28px 33px;
 	/* transition: all 0.2s ease-in; */
@@ -656,7 +656,7 @@ a:hover {
 
 .our-presentation  .btn-u.btn-play:hover,
 .our-presentation  .btn-u.btn-play:focus {
-	background: teal;
+	background: #32D010;
 	color: #fff;
 	/* transform: scale(1.1); */
 }
@@ -841,7 +841,7 @@ a:hover {
 
 /* Changing the default color and background color of the heading  */
 .why-ourapp-text .acc-v1 .panel-heading a {
-    background: teal;
+    background: #32D010;
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
@@ -1111,7 +1111,7 @@ a:hover {
 
 .subscribe .input-group .btn-u.btn-sub:hover,
 .subscribe .input-group .btn-u.btn-sub:focus {
-	background: teal;
+	background: #32D010;
 }
 
 /* --------------------------------------------------

@@ -18,7 +18,7 @@ hr.style13 {
     font-weight: 400;
     padding: 6px 13px;
     position: relative;
-    background: #32D010;
+    background: #33cc33;
     white-space: nowrap;
     display: inline-block;
     text-decoration: none;
@@ -37,7 +37,7 @@ hr.style13 {
     text-align: center;
     border-radius: 3px;
     margin: 0px 5px;
-    background: #32D010;
+    background: #33cc33;
     color: white;
     display: block;
     overflow:initial

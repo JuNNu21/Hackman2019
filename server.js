@@ -12,7 +12,7 @@ const expressSession = require('express-session');
 // cookies are used to save authentication
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-
+const Config = require("./models/config");
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}))
 // parse application/json
@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/api', apiRoutes);
-
+app.set("view engine", "ejs");
 authController(app);
 
 // index route
@@ -38,7 +38,12 @@ app.get('/', function(req, res) {
 });
 
 // register route
-app.get('/register', function(req, res) {
+app.get('/register',async function(req, res) {
+  var active= await Config.findOne({_id:"5dad9bded6ab701d57cab8ad"})
+  // console.log(active.toJSON().active)
+  if(!active.toJSON().active){
+    res.sendFile(__dirname + '/views/closed.html');
+  }
   if(req.cookies['email']){
     console.log(req.cookies['email']);
     res.sendFile(__dirname + '/views/register.html');
@@ -46,6 +51,9 @@ app.get('/register', function(req, res) {
   else{
     res.redirect("/");
   }
+});
+app.get('/closed', function(req, res) {
+  res.sendFile(__dirname + '/views/closed.html');
 });
 
 // coc route

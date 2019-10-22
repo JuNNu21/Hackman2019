@@ -13,7 +13,7 @@
             <meta name="description" content="Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman, Hackman v4 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 4th & 5th of November, 2017.">
             <meta name="author" content="">
             <!-- Favicon -->
-            <link rel="shortcut icon" href="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackmanheader.jpg?v=1571591547343">
+            <link rel="shortcut icon" href="/img/hackman4header.jpeg">
             <!-- Web Fonts -->
             <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin">
             <!-- CSS Global Compulsory -->
@@ -38,8 +38,32 @@
             <link rel="stylesheet" href="/css/app.style.css">
             <!-- CSS Customization -->
             <link rel="stylesheet" href="/css/custom.css">
+            <style>
+              .triangle {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 20px 100vw;
+                border-color: transparent transparent #33cc33 transparent;
+                -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg);
+/*                 -webkit-transform-origin: 3% 0; */
+/*                 transform-origin: 3% 0; */
+                }
+              .triangle1 {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 20px 100vw;
+                border-color: transparent transparent #33cc33 transparent;
+                -webkit-transform: rotate(175deg);
+                transform: rotate(175deg);
+/*                 -webkit-transform-origin: 3% 0; */
+/*                 transform-origin: 3% 0; */
+                }
+          </style>
         </head>
-        <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+        <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery" style="background:#000">
             <!-- Header -->
             <nav class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
                 <div class="container">
@@ -51,8 +75,8 @@
                         <span class="icon-bar"></span>
                         </button>
 <!--                    <a class="navbar-brand" href="https://hackman3.glitch.me"> -->
-                        <a class="navbar-brand" href="https://hackman.in">
-                        <img src="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackman4logo.jpg?v=1571588761146" alt="Logo">
+                        <a class="navbar-brand" href="/">
+                        <img src="img/hackman4logo.jpg" alt="Logo">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -93,12 +117,12 @@
             <!-- End Header -->
             <!-- Promo Block -->
             <section class="promo-section" id="intro">
-                <div class="interactive-slider-v2">
+                <div class="interactive-slider-v2" style="background:#000">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-1 promo-info">
-                                <img class="img-responsive animated slideInUp wow" src="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackman4logogrey.jpg?v=1571591336449" alt="logo">
-                                <p>November 9th|10th <br><br> <b>#EAT #CODE #COFFEE #REPEAT</b></p>
+                                <img class="img-responsive animated slideInUp wow" src="/img/hackman4black.jpeg" alt="logo">
+                                <p>November 9th|10th 2K19<br><br> <b style="color:#fff">eat(); &nbsp;&nbsp; code(); &nbsp;&nbsp; coffee(); &nbsp;&nbsp; repeat();</b></p>
                                 <a href="/auth/google" class="btn-u btn-banner btn-apple"><i class="fa fa-edit fa-2x"></i>REGISTER<br></a>                               
                             </div>
                         </div>
@@ -110,17 +134,17 @@
                     </div>
                 </div>
             </section>       
-          <br>
+          <br><br><br><br><br>
             <!-- End Promo Block -->
-            
+            <div class="triangle"></div>
             <!-- Benefits -->
             <section id="benefits">
                 <div class="container">
                     <div class="g-pt-90 g-pb-70">
                         <div class="g-heading-v10 g-mb-65 text-center">
-                            <h2><em class="block-name"><span>02.</span>About Us</em></h2>
-                            <img src="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackman4logo.jpg?v=1571588761146" width="20%" height="10%">
-                            <p><br>Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman 2k18, Hackman v4 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 9th & 10th of November 2019.</p>
+                            <h2><em class="block-name" style="color:#fff"><span>02.</span>About Us</em></h2>
+                            <img src="/img/hackman4black.jpeg" width="20%" height="10%">
+                            <p><br>Hackman is an annual 24-hour hackathon. After the successful iteration of Hackman 2k18, Hackman v4 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 9th & 10th of November 2019.</p>
                         </div>
                         <div class="row equal-height-columns">
                             <div class="col-md-4 benefit-box animated fadeIn wow" data-wow-duration="1.5s">
@@ -129,21 +153,21 @@
                                     <h3>Mark the dates<br>
                                         9th & 10th November,2019
                                     </h3>
-                                    <p>Hackman v4 will be conducted on 9th November,2019 till 10th November,2019</p>
+                                    <p>Hackman v4 will be conducted from 9th November,2019 till 10th November,2019</p>
                                 </div>
                             </div>
                             <div class="col-md-4 benefit-box animated fadeIn wow" data-wow-duration="1.5s" data-wow-delay=".3s">
                                 <div class="benefit equal-height-column">
                                     <i class="fa fa-cutlery fa-3x" style= "color: #2eb82e"></i>
                                     <h3>We have lots in store</h3>
-                                    <p>Hackman v4 will take care of your Hunger,Entertainment for 24 hours</p>
+                                    <p>Hackman v4 will take care of your Hunger and Entertainment for 24 hours</p>
                                 </div>
                             </div>
                             <div class="col-md-4 benefit-box animated fadeIn wow" data-wow-duration="1.5s" data-wow-delay=".5s">
                                 <div class="benefit equal-height-column">
                                     <i class="fa fa-users fa-3x" style= "color: #2eb82e"></i>
                                     <h3>Build your team<br>or join a team</h3>
-                                    <p>Build a team of Minimum 3 and Maximum 4 people to compete with other teams.</p>
+                                    <p>Build a team of Minimum 2 and Maximum 4 people to compete with other teams.</p>
                                 </div>
                             </div>
                         </div>
@@ -174,24 +198,28 @@
                 </div>
             </section>
             <!-- End Benefits -->
+          
+          <div class="triangle1"></div>
             <!--Sponsors-->
-            <div class="container content margin-bottom-60" style="background: #f8f8f8">
+            <div class="container content margin-bottom-60" style="background: #000">
                 <div class="row">
                     <div class="g-heading-v10 g-mb-65 text-center" id="partners">
-                      <h2><em class="block-name"><span>03.</span> Partners</em>OUR<strong> PARTNERS</strong></h2>
+                      <h2 style="color:#fff"><em class="block-name"><span>03.</span> Partners</em>OUR<strong> PARTNERS</strong></h2>
                     </div>
                   <div class="row">
                     <div class="col-md-3 shadow-wrapper">
-                        <div class="hero box-shadow shadow-effect-2">
-                            <a href="https://clootrack.com" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/clootrack.jpeg" alt="Clootrack"></a>
+                        <div class="hero box-shadow shadow-effect-2" align="middle">
+                            <a href="https://www.simplify3x.com/" target="_blank"><br><br><br><br>
+                              <img class="img-responsive img-bordered thumbnail" align="middle" src="/img/simplify3x.jpg" alt="Simplify3x">
+                          </a><br><br><br><br>
                         </div>
                     </div>
                     <div class="col-md-8" style="font-size: 14px">
                         <div class="shadow-wrapper">
                             <blockquote class="hero box-shadow shadow-effect-2">
-                                <div class="headline"><h2>Clootrack - Internship Partner</h2></div>
+                                <div class="headline"><h2>Simplify3x - Associate Sponsor</h2></div>
                                     <dl class="dl-horizontal">
-                                        <dd>Clootrack is the first of its kind platform, that discovers and measures brand perception metrics that matter. With a team that consist of data scientists, programmers and industry experts excited about immense capabilities of data and its impact in driving growth.
+                                        <dd>We are here to make a significant difference in the way software test engineering practiced by addressing THREE key attributes in Software Test Engineering - People, Process and Technology. Simplifying and optimizing every opportunity we see through our platform SimplifyQA we help our customers to achieve the agility, acceleration and test automation required in current business context.
                                         </dd>
                                     </dl>
                             </blockquote>
@@ -200,16 +228,16 @@
                   </div>
                   <div class="row">
                     <div class="col-md-3 shadow-wrapper">
-                        <div class="hero box-shadow shadow-effect-2">
-                            <a href="https://datoin.com/home/" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/datoin-logo.png" alt="Datoin"></a>
-                        </div>
+                        <div class="hero box-shadow shadow-effect-2" align="center">
+                            <a href="http:/saarthi.ai/" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/saarthi.jpg" align="middle" alt="Saarthi.ai"></a>
+                          </div>
                     </div>
                     <div class="col-md-8" style="font-size: 14px">
                         <div class="shadow-wrapper">
                             <blockquote class="hero box-shadow shadow-effect-2">
-                                <div class="headline"><h2>Datoin - Internship Partner</h2></div>
+                                <div class="headline"><h2>Saarthi.ai - Internship Partner</h2></div>
                                     <dl class="dl-horizontal">
-                                        <dd>Datoin is a No-code platform for developing intelligent applications. We are building a niche product to make AI accessible and easier to adopt.
+                                        <dd>Conversational AI driven multilingual omnichannel customer engagement solutions for enterprises worldwide.
                                         </dd>
                                     </dl>
                             </blockquote>
@@ -218,16 +246,16 @@
                   </div>
                   <div class="row">
                     <div class="col-md-3 shadow-wrapper">
-                        <div class="hero box-shadow shadow-effect-2">
-                            <a href="https://vraio.in" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/vraio.png" alt="Vraio"></a>
+                        <div class="hero box-shadow shadow-effect-2" align="center">
+                            <a href="https://www.theghack.in/" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/ghacklogo.png" height="190px" width="160px" alt="gHack"></a>
                         </div>
                     </div>
                     <div class="col-md-8" style="font-size: 14px">
                         <div class="shadow-wrapper">
                             <blockquote class="hero box-shadow shadow-effect-2">
-                                <div class="headline"><h2>VRAIO - Internship Partner</h2></div>
+                                <div class="headline"><h2>gHack - Internship Partner</h2></div>
                                     <dl class="dl-horizontal">
-                                        <dd>VRAIO provides Software Development, Analytics and Digital Marketing, Software Consulting Services. They specialize in developing database driven websites with the functionality to meet the needs. They help clients reach target audience, generate leads, and increase revenue via multi-channel marketing using persona, demographic and psychographic profiling.
+                                        <dd>GHack Bat Sensor is a powerful, motion-intelligent, device that leverages Artificial Intelligence thereby enabling you to level up your game. The device makes your cricket bat smart transforming it into a self-performance tracker by providing personalized and real-time performance analysis.
                                         </dd>
                                     </dl>
                             </blockquote>
@@ -236,18 +264,17 @@
                   </div>
                   <div class="row">
                     <div class="col-md-3 shadow-wrapper">
-                        <div class="hero box-shadow shadow-effect-2">
-                            <a href="https://mozillaindia.org" target="_blank"><img class="img-responsive img-bordered thumbnail" src="/img/mozillakarnataka.jpeg" alt="Mozilla Karnataka"></a>
-                        </div>
+                        <div class="hero box-shadow shadow-effect-2" align="center">
+                            <a href="https://www.juntrax.com/" target="_blank"><br><br>
+                              <img class="img-responsive img-bordered thumbnail" src="/img/juntrax.png" height="80px" width="240px" align="middle" alt="Juntrax"></a><br><br><br>
+                          </div>
                     </div>
                     <div class="col-md-8" style="font-size: 14px">
                         <div class="shadow-wrapper">
                             <blockquote class="hero box-shadow shadow-effect-2">
-                                <div class="headline"><h2>Mozilla Karnataka - Community Partner</h2></div>
+                                <div class="headline"><h2>Juntrax - Internship Partner</h2></div>
                                     <dl class="dl-horizontal">
-                                        <dd>Mozilla Karnataka is part of the global community of the Mozilla Foundation, founded to manifest the state of the Mozilla community in Karnataka. Mozilla's mission is to promote openness, innovation and opportunity on the web.
-                                        </dd>
-                                        <dd>Follow Mozilla Community on,
+                                        <dd>Configured for global offices, Juntrax provides integrated & efficient management of daily operations. This out-of-the-box solution transforms the way you manage your office, vendors and clients. Paper and excel files become a thing of the past as this secure and reliable platform brings together all your multi-location operations at your fingertips. 
                                         </dd>
                                     </dl>
                             </blockquote>
@@ -256,7 +283,8 @@
                   </div>
                 </div>
           </div>
-            <!--<div class="container content margin-bottom-60" style="background: #f8f8f8">
+          <!--
+            <div class="container content margin-bottom-60" style="background: #f8f8f8">
                 <div class="row">
                     <div class="g-heading-v10 g-mb-65 text-center" id="internship">
                       <h2><em class="block-name"><span>03.</span> Internship Opportunities</em>OUR<strong> INTERNSHIP PARTNERS</strong></h2>
@@ -462,10 +490,12 @@
         </div>-->
             <!--End Sponsors-->
             <!-- Video and Gallery -->
+            <div class="triangle"></div>
+            <br><br><br>
             <section id="whywe">
                 <div class="container">
                   <div class="g-heading-v10 g-mb-65 text-center">
-                      <h2><em class="block-name"><span>04.</span>Presentation</em>Watch <strong>Our presentation</strong></h2>
+                      <h2 style="color:#fff"><em class="block-name"><span>04.</span>Presentation</em>Watch <strong>Our presentation</strong></h2>
                       <p>Watch our previous Year Moments</p>
                   </div>
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -476,13 +506,16 @@
                         <li data-target="#myCarousel" data-slide-to="2"></li>
                         <li data-target="#myCarousel" data-slide-to="3"></li>
                         <li data-target="#myCarousel" data-slide-to="4"></li>
-                        <li data-target="#myCarousel" data-slide-to="5"></li>
                       </ol>
   
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner">
                         <div class="item active">
                           <img src="/img/corousal/1.jpeg" alt="hackman">
+                        </div>
+                        
+                        <div class="item">
+                          <img src="/img/11.jpg" alt="hackman">
                         </div>
   
                         <div class="item">
@@ -499,10 +532,6 @@
                         
                         <div class="item">
                           <img src="/img/corousal/5.jpeg" alt="hackman">
-                        </div>
-                        
-                        <div class="item">
-                          <img src="/img/corousal/6.jpeg" alt="hackman">
                         </div>
 
                       </div>
@@ -528,27 +557,57 @@
                     <div class="container">
                         <div class="how-it-works">
                             <div class="g-heading-v10 g-mb-65 text-center">
-                                <h2 class="g-color-white"><em class="block-name"><span class="g-color-white">05.</span>From the <strong>Participants</strong></em></h2>
-                                <p>Previous Year participants had a lot to say about Hackman</p>
+                                <h2 class="g-color-white" style="color:#fff"><em class="block-name"><span class="g-color-white">05.</span>From the <strong>Participants</strong></em></h2>
+                                <p>Previous Year participants had a lot to say about Hackman 2k18</p>
                             </div>
                             <!-- Owl Carousel v4-->
                             <div class="owl-carousel-v4 owl-theme">
                                 <div class="owl-slider-v4-hiw">
+                                  <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                      <div class="card text-center" style="background:#000; padding:20px;min-height:240px;margin: 10px 0px;">
+                                        <div class="card-body">
+                                          <h2 style="color:#fff;">Pulkit Bhatnagar</h2>
+                                          <p style="color:#fff;">Winner, Hackman 2k18</p>
+                                          <p style="color:#fff;">Hackman 2k18 gave us the chance to showcase our idea to the experienced entrepreneurs. They helped us to improvise our products by giving suggestions and make our products feasible to the society. It was really a great experience to attend this hackathon. </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                      <div class="card text-center" style="background:#000;padding:20px;min-height:240px;margin: 10px 0px;">
+                                        <div class="card-body">
+                                        <h2 style="color:#fff;">Ananta Malpani</h2>
+                                        <p style="color:#fff;">Hackman 3.0 was an amazing experience. Its much more than just a contest. There are tech sessions from experts and alumini, entertainment, and good food. You are never bored. Coordinators and mentors are very helpful. It's a well organized event you get to learn lot of new things. Overall, its learning with lot of fun.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                      <div class="card text-center" style="background:#000;padding:20px;min-height:240px;margin: 10px 0px;">
+                                        <div class="card-body">
+                                        <h2 style="color:#fff;">Baba Sidharth</h2>
+                                        <p style="color:#fff;">One of the most fun-filled and competitive hackathons I've ever been to. Everything from food, music and mentor support was top notch. Looking forward to participate again and have a great time. #Hackman</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+<!--                                     <div class="item">
+                                        <img src="/img/img3.jpg" alt="">
+                                        <h2>Pulkit Bhatnagar</h2>
+                                        <p>Winner, Hackman 2k18</p>
+                                        <p>Hackman 2k18 gave us the chance to showcase our idea to the experienced entrepreneurs. They helped us to improvise our products by giving suggestions and make our products feasible to the society. It was really a great experience to attend this hackathon. </p>
+                                    </div>
                                     <div class="item">
                                         <img src="/img/img1.jpg" alt="">
-                                        <h2>Anmol Gaba</h2>
-                                        <p>We got to learn a lot from other teams, seniors, mentors and judges. The 24-hour event was well organized, the food was great and the overall experience was awesome! Looking forward to another iteration Hackman next year! :)</p>
+                                        <h2>Ananta Malpani</h2>
+                                        <p>Hackman 3.0 was an amazing experience. Its much more than just a contest. There are tech sessions from experts and alumini, entertainment, and good food. You are never bored. Coordinators and mentors are very helpful. It's a well organized event you get to learn lot of new things. Overall, its learning with lot of fun.</p>
                                     </div>
                                     <div class="item">
                                         <img src="/img/img2.jpg" alt="">
-                                        <h2>Harish Rock</h2>
-                                        <p>Good good good bcz new ideas, Good mentors and their suggestions....Best coordinators...Good management.....Not getting bored at all... quick responseness One of best thing is we are feeling crazy to do our concept what we have.....Thanks a lot @hackman</p>
-                                    </div>
-                                    <div class="item">
-                                        <img src="/img/img3.jpg" alt="">
-                                        <h2>Rajat Gupta</h2>
-                                        <p>Wonderful Experience. Won 2nd position #Neutrinos. Good Vibes. Met a lot of wonderful people. Will surely come back next year for the first prize.#Hackman #WeAreHackman</p>
-                                    </div>
+                                        <h2>Baba Sidharth</h2>
+                                        <p>One of the most fun-filled and competitive hackathons I've ever been to. Everything from food, music and mentor support was top notch. Looking forward to participate again and have a great time. #Hackman</p>
+                                    </div> -->
+                                    
                                 </div>
                             </div>
                             <!-- End Owl Carousel v4 -->
@@ -562,7 +621,7 @@
                             <div class="col-md-7">
                                 <div class="why-ourapp-text">
                                     <div class="g-heading-v10 g-mb-65">
-                                        <h2><em class="block-name"><span>06.</span>FAQs</em>Some <strong>FAQs</strong></h2>
+                                        <h2 style="color:#fff"><em class="block-name"><span>06.</span>FAQs</em>Some <strong>FAQs</strong></h2>
                                         <p>Here are some FAQs related to Hackman v4!!!</p>
                                     </div>
                                     <!-- Accordion v1 -->
@@ -591,7 +650,7 @@
                                             </div>
                                             <div id="collapse-Two" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <p>The registration fees for Hackman v4 is 300 Rs. per person in the team.</p>
+                                                    <p>The registration fees for Hackman v4 is 299 Rs. per person in the team.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -605,7 +664,7 @@
                                             </div>
                                             <div id="collapse-Three" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <p>You can have maximum 4 members and minimum 1 member in the team!</p>
+                                                    <p>You can have maximum 4 members and minimum 2 member in the team!</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -645,7 +704,12 @@
                                 <div class="col-md-12">
                                     <div class="g-heading-v10 g-mb-65">
                                         <h2 class="g-color-white"><em class="block-name"><span class="g-color-white">07.</span> Contact us</em> Answers to <strong>your Questions</strong></h2>
-                                        <p>In case of any queries contact us through chat or call<br><strong><i class="fa fa-envelope" aria-hidden="true"></i><a style="color: white" href="mailto:contact@hackman.in"> contact@hackman.in</a></strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Ashish Kumar Mishra  +918197273832</strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Harsh Kumar  +917764946977</strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Ananya  +918088010513</strong></p>
+                                        <p>In case of any queries contact us through chat or call<br><strong><i class="fa fa-envelope" aria-hidden="true"></i><a style="color: white" href="mailto:contact@hackman.in"> contact@hackman.in</a></strong><br>
+                                          
+<!--                                           <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+919122528559" style="color:#fff">Achyuth Simha  +91 809-5789-025 </a></strong><br> -->
+                                          <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+919066148145" style="color:#fff">Swarnim Shikhar  +91 912-2528-559</a></strong><br>
+                                          <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+918050478163" style="color:#fff">Navaneeth Raj  +91 805-0478-163</a></strong><br>
+                                      </p>
                                     </div>
                                 </div>
                             </div>
@@ -654,7 +718,7 @@
                 </div>
                 <!--Google Maps Embed-->
                 <div class="container-fluid no-side-padding">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0029172171785!2d77.563501715187!3d12.90753369089803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15630fedeecf%3A0xe99711388d9ecc92!2sDayananda+Sagar+Institutions!5e0!3m2!1sen!2sin!4v1508363789425" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJAQAQEGMVrjsRvvuARNpTvnE&key=AIzaSyA29c8qr_5l93HtDPqRxES2gU1NiotZnV8" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>               
                 </div>
                 <div class="container-fluid with-bg-2">
                     <div class="subfooter">

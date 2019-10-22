@@ -2800,14 +2800,14 @@
 .shadow-effect-2:before,
 .shadow-effect-3:before,
 .shadow-effect-4:after {
-  transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
+  transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
   -webkit-transform: rotate(-3deg);
-  box-shadow: 0 15px 10px #999;
-  -moz-box-shadow: 0 15px 10px #999;
-  -webkit-box-shadow: 0 15px 10px #999;
+  box-shadow: 0 15px 20px #33cc33;
+  -moz-box-shadow: 0 15px 20px #33cc33;
+  -webkit-box-shadow: 0 15px 20px #33cc33;
 }
 
 .shadow-effect-2:after,

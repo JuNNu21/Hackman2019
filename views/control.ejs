@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hackman v4</title>
+            <!-- Meta -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman, Hackman v4 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 4th & 5th of November, 2017.">
+            <meta name="author" content="">
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackmanheader.jpg?v=1571591547343">
+            <!-- Web Fonts -->
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin">
+            <!-- CSS Global Compulsory -->
+            <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/app.css">
+            <link rel="stylesheet" href="/css/blocks.css">
+            <link rel="stylesheet" href="/css/plugins.css">
+            <link rel="stylesheet" href="/css/one.style.css">
+            <!-- CSS Footer -->
+            <link rel="stylesheet" href="/css/footers/footer-v7.css">
+            <!-- CSS Implementing Plugins -->
+            <link rel="stylesheet" href="/plugins/animate.css">
+            <link rel="stylesheet" href="/plugins/line-icons/line-icons.css">
+            <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+            <link rel="stylesheet" href="/plugins/pace/pace-flash.css">
+            <link rel="stylesheet" href="/plugins/owl-carousel2/assets/owl.carousel.css">
+            <link rel="stylesheet" href="/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+            <link rel="stylesheet" href="/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+            <link rel="stylesheet" href="/plugins/shhos/shhos.css">
+            <!--<link rel="stylesheet" href="/css/particle.css">-->
+            <!-- CSS Theme -->
+            <link rel="stylesheet" href="/css/app.style.css">
+            <!-- CSS Customization -->
+            <link rel="stylesheet" href="/css/custom.css">
+            <style>
+    
+/*               thead tr:first-child th { position: sticky; top: 0;z-index:1000;background:#fff } */
+            </style>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+          <br><br><br>
+          <div class="row">
+            <%if(active){%>
+              <form action="/api/disable" method="POST">
+                <input type="text" class="form-control" name="pass" id="pass" placeholder="password"><br>
+                <input type="submit" class="btn btn-danger" value="Close Registrations">
+              </form>
+              
+            <%}else{%>
+              <form action="/api/enable" method="POST">
+                <input type="text" class="form-control" name="pass" id="pass" placeholder="password"><br>
+                <input type="submit" class="btn btn-success" value="Open Registrations">
+              </form>
+            <%}%>
+            <%=active%>
+            
+          </div>
+        </div>
+    </section>
+    
+    
+    
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

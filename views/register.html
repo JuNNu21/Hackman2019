@@ -5,7 +5,7 @@
     <!--[if !IE]><!-->
     <html lang="en">
         <head>
-            <title>Hackman 2k18</title>
+            <title>Hackman v4</title>
             <!-- Meta -->
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -13,7 +13,7 @@
             <meta name="description" content="Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman, Hackman 2.0 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 4th & 5th of November, 2017.">
             <meta name="author" content="">
             <!-- Favicon -->
-            <link rel="shortcut icon" href="/img/hackman3head.jpeg">
+            <link rel="shortcut icon" href="/img/hackman4header.jpeg">
             <!-- Web Fonts -->
             <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin">
             <!-- CSS Global Compulsory -->
@@ -51,8 +51,8 @@
                         <span class="icon-bar"></span>
                         </button>
 <!--                    <a class="navbar-brand" href="https://hackman3.glitch.me">\ -->
-                        <a class="navbar-brand" href="https://hackman.in">
-                        <img src="/img/hackman3logo.jpeg" alt="Logo">
+                        <a class="navbar-brand" href="/">
+                        <img src="/img/hackman4logo.jpg" alt="Logo">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,11 +81,41 @@
             <br><br><br><br><br><br>
             <section>
                 <div class="container">
-                    <h2>The tickets are sold out!!</h2>
-                    <img src="/img/sold-out.png" width=350 height=200 alt="sold out">
+<!--                     <h2>The tickets are sold out!!</h2>
+                    <img src="/img/sold-out.png" width=350 height=200 alt="sold out"> -->
+                  <p id="user-google-email">Welcome </p>
+                    <center><h2><strong> REGISTER YOUR TEAM</strong></h2></center>
+                    <p id="inst" class="text-danger">Ticket will be sent to Team Leader email. Please provide the details correctly</p>
+                    <form id="registration-form">
+                        <div class="form-group col-lg-12">
+                            <label for="team-name">Team Name *:</label>
+                            <input class="form-control" placeholder="Team Name" type="text" id="team-name" name="team-name"/>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label for="team-size">Team Size *: <span id="team-size-label"></span></label>
+                            <input class="form-control" placeholder="Team Size" type="number" id="team-size" name="team-size" min="2" max="4"/>
+                        </div>
+                        <button class="btn btn-primary" id="enter-details-button" style="background-color:#2eb82e;">Enter Details</button>
+                        <div id="enter-details" style="display:none;">
+                        </div>
+                    </form>
+                    <button class="btn btn-primary" id="register-button" style="display:none; background-color:#2eb82e;">Register</button>
                 </div>
             </section>
             <!-- End Features -->
+          
+           <br><br>
+            <section id="registered" style="display:none;">
+            </section>
+            <section id="ticket" style="display:none;">
+            </section>
+            <br><br>
+            <div class="container">
+              <div class="text-center">
+                  <button class="btn btn-primary" id="pay-button" style="display:none; background-color:#2eb82e;">Make Payment to Complete Registration</button>
+              </div>
+            </div>
+            <br><br>
             <section id="contact">
                 <div class="container-fluid with-bg-2 no-side-padding">
                     <div class="container">
@@ -94,7 +124,12 @@
                                 <div class="col-md-12">
                                     <div class="g-heading-v10 g-mb-65">
                                         <h2 class="g-color-white"><em class="block-name"><span class="g-color-white"></span> Contact us</em> Answers to <strong>your Questions</strong></h2>
-                                        <p>In case of any queries contact us through chat or call<br><strong><i class="fa fa-envelope" aria-hidden="true"></i><a style="color: white" href="mailto:contact@hackman.in"> contact@hackman.in</a></strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Ashish Kumar Mishra  +918197273832</strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Harsh Kumar  +917764946977</strong><br><i class="fa fa-phone" aria-hidden="true"></i><strong> Ananya  +918088010513</strong></p>
+                                        <p>In case of any queries contact us through chat or call<br><strong><i class="fa fa-envelope" aria-hidden="true"></i><a style="color: white" href="mailto:contact@hackman.in"> contact@hackman.in</a></strong><br>
+                                          
+<!--                                           <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+919122528559" style="color:#fff">Achyuth Simha  +91 809-5789-025 </a></strong><br> -->
+                                          <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+919066148145" style="color:#fff">Swarnim Shikhar  +91 912-2528-559</a></strong><br>             
+                                          <i class="fa fa-phone" aria-hidden="true"></i><strong> <a href="tel:+918050478163" style="color:#fff">Navaneeth Raj  +91 805-0478-163</a></strong><br>
+                                      </p>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +138,7 @@
                 </div>
                 <!--Google Maps Embed-->
                 <div class="container-fluid no-side-padding">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0029172171785!2d77.563501715187!3d12.90753369089803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15630fedeecf%3A0xe99711388d9ecc92!2sDayananda+Sagar+Institutions!5e0!3m2!1sen!2sin!4v1508363789425" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJAQAQEGMVrjsRvvuARNpTvnE&key=AIzaSyA29c8qr_5l93HtDPqRxES2gU1NiotZnV8" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="container-fluid with-bg-2">
                     <div class="subfooter">
@@ -136,6 +171,223 @@
             <!--<script src="/plugins/shhos/shhos.js"></script>-->
             <!--<script src="/plugins/wow/wow-ini-themes.js"></script>-->
             <!-- JS Page Level-->
+          
+          <!-- register -->
+            <script type="text/javascript">
+                var reg_team_data;
+                $(document).ready(function(){
+                  $.ajax({
+                    type: 'GET',
+                    url: '/api/getRegistration',
+                    success: function(data){
+                      //do something with the data via front-end framework
+                      // console.log(data);
+                      if(data){
+                        reg_team_data = data;
+                        if(data.payment == true){
+                         $('#registration-form').hide();
+                         $('#register-button').hide();
+                         $('#pay-button').hide();
+                          $('#inst').hide();
+                          
+                         var reg_data_html = '';
+                         reg_data_html+="<div class='container'>"
+                         reg_data_html+="<h4>You have successfully made the payment. Your tickets will be sent to team leader's email. Take a screenshot of this page.</h4>"
+                         reg_data_html+="<div class='jumbotron col-lg-12' style='background-color:#8ff28f;color:black;'>"
+                         reg_data_html+="<div class='col-lg-6'>Team Name: "+data['team-name']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Size: "+data['team-size']+"</div>"
+                         reg_data_html+="<div class='col-lg-12'>Payment ID: "+data['payment_id']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Name: "+data['team-leader-name']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Email: "+data['team-leader-email']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Phone: "+data['team-leader-phone']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader College: "+data['team-leader-college']+"</div>"
+                          
+                         var i;
+                         for(i=2;i<=data['team-size'];i++){
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Name: "+data['team-member-'+i+'-name']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Email: "+data['team-member-'+i+'-email']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Phone: "+data['team-member-'+i+'-phone']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" College: "+data['team-member-'+i+'-college']+"</div>"
+                         }
+                          
+                         reg_data_html+="</div>"
+                         reg_data_html+="</div>"
+                          
+                         $('#ticket').html(reg_data_html);
+                         $('#ticket').show();
+                        }
+                        else if(data.registered == true){
+                          $('#registration-form').hide();
+                          $('#register-button').hide();
+                          $('#inst').hide();
+                          
+                         var reg_data_html = '';
+                         reg_data_html+="<div class='container'>"
+                         reg_data_html+="<h4>You have successfully registered for Hackman v4. Please make the payment to get your ticket.</h4>"
+                         reg_data_html+="<div class='jumbotron col-lg-12' style='background-color:#8ff28f;color:black;'>"
+                         reg_data_html+="<div class='col-lg-6'>Team Name: "+data['team-name']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Size: "+data['team-size']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Name: "+data['team-leader-name']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Email: "+data['team-leader-email']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader Phone: "+data['team-leader-phone']+"</div>"
+                         reg_data_html+="<div class='col-lg-6'>Team Leader College: "+data['team-leader-college']+"</div>"
+                          
+                         var i;
+                         for(i=2;i<=data['team-size'];i++){
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Name: "+data['team-member-'+i+'-name']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Email: "+data['team-member-'+i+'-email']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" Phone: "+data['team-member-'+i+'-phone']+"</div>"
+                           reg_data_html+="<div class='col-lg-6'>Team Member "+i+" College: "+data['team-member-'+i+'-college']+"</div>"
+                         }
+                         reg_data_html+="</div>"
+                         reg_data_html+="</div>"
+                          
+                          $('#registered').html(reg_data_html);
+                          $('#registered').show();
+                          $('#pay-button').show();
+                        }
+                        else{
+                          console.log("Team not registered!");                         
+                        }
+                      }
+                    }
+                  });
+                });
+                function getCookie(a) {
+                    var b = decodeURIComponent(document.cookie).match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+                    return b ? b.pop() : '';
+                }
+                const email = getCookie('email');
+                $("#user-google-email").append(email);
+                console.log(email);
+              
+              //enter team details function
+                $('#enter-details-button').click(function(event){
+                  event.preventDefault();
+                  var team_name = $('#team-name').val();
+                  var team_size = $('#team-size').val();
+                  if(team_size >=2 && team_size <=4 && team_name!=""){
+                    var details='';
+                    details+='<p>Team Leader:</p>'
+                    details+='<div class="form-group col-lg-3">'
+                    details+='<label for="team-leader-name">Name *:</label>'
+                    details+='<input class="form-control" placeholder="Name" type="text" id="team-leader-name" name="team-leader-name"/>'
+                    details+='</div>'
+                    details+='<div class="form-group col-lg-3">'
+                    details+='<label for="team-leader-email">E-mail *:</label>'
+                    details+='<input class="form-control" placeholder="E-mail" type="email" id="team-leader-email" name="team-leader-email"/>'
+                    details+='</div>'
+                    details+='<div class="form-group col-lg-3">'
+                    details+='<label for="team-leader-phone">Phone *:</label>'
+                    details+='<input class="form-control" placeholder="10 digit number" type="number" id="team-leader-phone" name="team-leader-phone"/>'
+                    details+='</div>'
+                    details+='<div class="form-group col-lg-3">'
+                    details+='<label for="team-leader-college">College *:</label>'
+                    details+='<input class="form-control" placeholder="College" type="text" id="team-leader-college" name="team-leader-college"/>'
+                   details+='</div>'
+                    
+                    var i;
+                    for(i=2;i<=team_size;i++){
+                      details+='<p>Team Member '+i+':</p>'
+                      details+='<div class="form-group col-lg-3">'
+                      details+='<label for="team-member-'+i+'-name">Name *:</label>'
+                      details+='<input class="form-control" placeholder="Name" type="text" id="team-member-'+i+'-name" name="team-member-'+i+'-name"/>'
+                      details+='</div>'
+                      details+='<div class="form-group col-lg-3">'
+                      details+='<label for="team-member-'+i+'-email">E-mail *:</label>'
+                      details+='<input class="form-control" placeholder="E-mail" type="email" id="team-member-'+i+'-email" name="team-member-'+i+'-email"/>'
+                      details+='</div>'
+                      details+='<div class="form-group col-lg-3">'
+                      details+='<label for="team-member-'+i+'-phone">Phone *:</label>'
+                      details+='<input class="form-control" placeholder="10 digit number" type="number" id="team-member-'+i+'-phone" name="team-member-'+i+'-phone"/>'
+                      details+='</div>'
+                      details+='<div class="form-group col-lg-3">'
+                      details+='<label for="team-member-'+i+'-college">College *:</label>'
+                      details+='<input class="form-control" placeholder="College" type="text" id="team-member-'+i+'-college" name="team-member-'+i+'-college"/>'
+                      details+='</div>'
+                    }
+                    $('#team-size').hide();
+                    $('#enter-details-button').hide();
+                    $('#team-size-label').html(team_size);
+                    $('#enter-details').html(details);
+                    $('#enter-details').show();
+                    $('#register-button').show();
+                  }
+                  else{
+                   alert("Enter team name and size. Team size is minimum 2 and maximum 4"); 
+                  }
+                });
+              
+              //register team
+                $('#register-button').click(function(){
+                    var data = {};
+                    console.log(1);
+                    var reg_data = $('#registration-form').serializeArray();
+                    // console.log(reg_data);
+                    
+                   for(i=0;i<reg_data.length;i++){
+                        data[reg_data[i].name] = reg_data[i].value.trim();
+                    }
+                  
+                    //validation
+                    if(data['team-name']=="" || data['team-size']==""){
+                     alert("Please fill team name and team size"); 
+                     return;
+                    }
+                    if(data['team-leader-name']=="" || data['team-leader-email']=="" || data['team-leader-phone']=="" || data['team-leader-college']==""){
+                     alert("Please fill all the details of team leader"); 
+                     return;
+                    }
+                    for(i=2;i<=data['team-size'];i++){
+                      if(data['team-member-'+i+'-name']=="" || data['team-member-'+i+'-email']=="" || data['team-member-'+i+'-phone']=="" || data['team-member-'+i+'-college']==""){
+                         alert("Please fill all the details of team member"+ i); 
+                         return;
+                      }
+                    }
+                  
+                    data.email = getCookie('email');
+                    data.payment = false;
+                    data.registered = false;
+                    console.log(data);
+                    $.ajax({
+                      type: 'POST',
+                      url: '/api/register_team',
+                      data: data,
+                      success: function(res){
+                        //do something with the data via front-end framework
+                        console.log(res);
+                        location.reload();
+                      }
+                    });
+                });
+              
+              //make payment
+                $('#pay-button').click(function(){
+                      $('#pay-button').prop('disabled', true);
+                      const data = {
+                        purpose: 'Hackman v4 Payment',
+                        amount : reg_team_data['team-size']*300,
+                        buyer_name: reg_team_data['team-name'],
+                        email: reg_team_data['team-leader-email'],
+                        phone: reg_team_data['team-leader-phone'],
+                        user_id: getCookie('id'),
+                        // redirect_url: 'https://hackman3.glitch.me/api/callback?email='+getCookie('email'),
+                        redirect_url: 'https://hackman.in/api/callback?email='+getCookie('email'),
+                        webhook_url: '/webhook/',
+                      }
+                      
+                      $.ajax({
+                        type: 'POST',
+                        url: '/api/pay',
+                        data: data,
+                        success: function(res){
+                          $('#pay-button').prop('disabled', true);
+                          console.log(res);
+                          window.location.href = res;
+                        }
+                      });
+                  });
+            </script>
             <script src="/js/one.app.js"></script>
             <script src="/js/plugins/pace-loader.js"></script>
             <script src="/js/plugins/owl-carousel2.js"></script>

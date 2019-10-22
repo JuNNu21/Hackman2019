@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hackman v4</title>
+            <!-- Meta -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman, Hackman v4 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 4th & 5th of November, 2017.">
+            <meta name="author" content="">
+            <!-- Favicon -->
+            <link rel="shortcut icon" href="https://cdn.glitch.com/c82b6b59-3626-4f7f-9aad-4e2db88e4f61%2Fhackmanheader.jpg?v=1571591547343">
+            <!-- Web Fonts -->
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin">
+            <!-- CSS Global Compulsory -->
+            <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/app.css">
+            <link rel="stylesheet" href="/css/blocks.css">
+            <link rel="stylesheet" href="/css/plugins.css">
+            <link rel="stylesheet" href="/css/one.style.css">
+            <!-- CSS Footer -->
+            <link rel="stylesheet" href="/css/footers/footer-v7.css">
+            <!-- CSS Implementing Plugins -->
+            <link rel="stylesheet" href="/plugins/animate.css">
+            <link rel="stylesheet" href="/plugins/line-icons/line-icons.css">
+            <link rel="stylesheet" href="/plugins/font-awesome/css/font-awesome.min.css">
+            <link rel="stylesheet" href="/plugins/pace/pace-flash.css">
+            <link rel="stylesheet" href="/plugins/owl-carousel2/assets/owl.carousel.css">
+            <link rel="stylesheet" href="/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+            <link rel="stylesheet" href="/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
+            <link rel="stylesheet" href="/plugins/shhos/shhos.css">
+            <!--<link rel="stylesheet" href="/css/particle.css">-->
+            <!-- CSS Theme -->
+            <link rel="stylesheet" href="/css/app.style.css">
+            <!-- CSS Customization -->
+            <link rel="stylesheet" href="/css/custom.css">
+            <style>
+    
+/*               thead tr:first-child th { position: sticky; top: 0;z-index:1000;background:#fff } */
+            </style>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+          <%if(p=="all"){%> 
+          <a href="/api/reg?p=all"><button class="btn btn-success">All</button></a>
+          <%}else{%>
+          <a href="/api/reg?p=all"><button class="btn ">All</button></a>
+          <%}%>
+          
+          <%if(p=="true"){%> 
+          <a href="/api/reg?p=true"><button class="btn btn-success">Paid</button></a>
+          <%}else{%>
+          <a href="/api/reg?p=true"><button class="btn ">Paid</button></a>
+          <%}%>
+          
+          <%if(p=="false"){%> 
+          <a href="/api/reg?p=false"><button class="btn btn-success">Not Paid</button></a>
+          <%}else{%>
+          <a href="/api/reg?p=false"><button class="btn ">Not Paid</button></a>
+          <%}%>
+          
+          <a href="/api/getAllRegistration"><button class="btn btn-success"> Download</button></a>
+          
+          
+          
+          <div class="row">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>SN</th>
+                  <th>Payment</th>
+                  <th>Team Name</th>
+                  <th>Team Size</th>
+                  <th>TeamLeader</th>
+                  <th>Member 1</th>
+                  <th>Member 2</th>
+                  <th>Member 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%reg.forEach(function(r,i){%>
+                  <tr>
+                    <%r=r.toJSON()%>
+                    <td><%=reg.length-i%></td>
+                    <%if(r.payment==true){%>
+                      <td><button class="btn btn-success">&#10004 </button><%=r.payment_id%></td>
+                    <%}else{%>
+                      <td><button class="btn btn-danger">&#10008 </button><%=r.payment_id%></td>
+                    <%}%>
+                    <td><%=r["team-name"]%></td>
+                    <td><%=r["team-size"]%></td>
+                    <td><%=r["team-leader-name"]%><br><%=r.email%><br><%=r["team-leader-phone"]%><br><%=r["team-leader-college"]%></td>                    
+                    <td><%=r["team-member-2-name"]%><br><%=r['team-member-2-email']%><br><%=r["team-member-2-phone"]%><br><%=r["team-member-2-college"]%></td>                           <td><%=r["team-member-3-name"]%><br><%=r['team-member-3-email']%><br><%=r["team-member-3-phone"]%><br><%=r["team-member-3-college"]%></td>       
+                    <td><%=r["team-member-4-name"]%><br><%=r['team-member-4-email']%><br><%=r["team-member-4-phone"]%><br><%=r["team-member-4-college"]%></td> 
+                    <%if(r["payment"]=="false"){%>
+                      <td><a href="/api/markPaid/<%=r._id%>" class="btn btn-primary">Mark Paid</a></td>
+                    <%}%>
+                  </tr>
+                <%});%>              
+              
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </section>
+    
+    
+    
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/jquery/jquery-migrate.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

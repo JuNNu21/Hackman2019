@@ -110,7 +110,7 @@ router.post('/enable',(req,res)=>{
 });
 
 router.get("/markPaid/:id",(req,res)=>{
-  if(req.cookies['email'] && (req.cookies['email']=="shravanisurankar@gmail.com")){
+  if(req.cookies['email'] && (req.cookies['email']=="shravanisurankar@gmail.com" || req.cookies['email']=="swarnimshekhar4897@gmail.com")){
     var id =req.params.id;
     var appendData={}
     appendData.payment=true;

@@ -148,7 +148,8 @@ router.post("/pay", (req, res) => {
   // Insta.isSandboxMode(true);
   var amount =req.body.amount;
   data.purpose = req.body.purpose;
-  data.amount = amount;
+  // data.amount = amount;
+  data.amount = req.body.team_size*300;
   data.buyer_name = req.body.buyer_name;
   data.redirect_url = req.body.redirect_url;
   data.email = req.body.email;

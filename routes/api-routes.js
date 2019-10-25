@@ -198,6 +198,8 @@ router.get("/callback/",async  (req, res) => {
     // Redirect the user to payment complete page.
     // return res.redirect('https://hackman3.glitch.me/register' );
     return res.redirect("https://hackman.in/register");
+  }else{
+    res.redirect("https://hackman.in/register");
   }
 });
 

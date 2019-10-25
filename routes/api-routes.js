@@ -172,13 +172,13 @@ router.post("/pay", (req, res) => {
   });
 });
 
-router.get("/callback/", (req, res) => {
+router.get("/callback/",async  (req, res) => {
   let url_parts = url.parse(req.url, true),
     responseData = url_parts.query;
 
   console.log(responseData);
 
-  if (responseData.payment_id) {
+  if (responseData.payment_id && responseData.status=="Credit") {
     let user_email = responseData.email;
 
     // Save the info that user has purchased the ticket.
@@ -187,7 +187,7 @@ router.get("/callback/", (req, res) => {
     appendData.payment_request_id = responseData.payment_request_id;
     appendData.payment = true;
 
-    Register.findOneAndUpdate(
+    await Register.findOneAndUpdate(
       { email: user_email },
       { $set: appendData },
       { new: true }

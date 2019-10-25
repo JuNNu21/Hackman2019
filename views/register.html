@@ -320,6 +320,7 @@
               
               //register team
                 $('#register-button').click(function(){
+                    $('#register-button').prop('disabled', true);
                     var data = {};
                     console.log(1);
                     var reg_data = $('#registration-form').serializeArray();
@@ -354,6 +355,7 @@
                       url: '/api/register_team',
                       data: data,
                       success: function(res){
+                        $('#register-button').prop('disabled', true);
                         //do something with the data via front-end framework
                         console.log(res);
                         location.reload();

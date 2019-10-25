@@ -199,7 +199,7 @@ router.get("/callback/",async  (req, res) => {
     // return res.redirect('https://hackman3.glitch.me/register' );
     return res.redirect("https://hackman.in/register");
   }else{
-    res.redirect("https://hackman.in/register");
+    return res.redirect("https://hackman.in/register");
   }
 });
 

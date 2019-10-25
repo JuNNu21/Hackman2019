@@ -153,9 +153,9 @@ router.post("/pay", (req, res) => {
   data.redirect_url = req.body.redirect_url;
   data.email = req.body.email;
   data.phone = req.body.phone;
-  data.send_email = true;
+  data.send_email = false;
   data.webhook = "http://www.example.com/webhook/";
-  data.send_sms = true;
+  data.send_sms = false;
   data.allow_repeated_payments = false;
 
   Insta.createPayment(data, function(error, response) {

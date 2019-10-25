@@ -366,6 +366,7 @@
                       $('#pay-button').prop('disabled', true);
                       const data = {
                         purpose: 'Hackman v4 Payment',
+                        team_size:reg_team_data['team-size'],
                         amount : reg_team_data['team-size']*307,
                         buyer_name: reg_team_data['team-name'],
                         email: reg_team_data['team-leader-email'],

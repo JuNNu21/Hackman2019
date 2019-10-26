@@ -178,7 +178,7 @@ router.get("/callback/",async  (req, res) => {
 
   console.log(responseData);
 
-  if (responseData.payment_id && responseData.status=="Credit") {
+  if (responseData.payment_id && responseData.payment_status=="Credit") {
     let user_email = responseData.email;
 
     // Save the info that user has purchased the ticket.

@@ -14,20 +14,37 @@ const INSTAMOJO_CLIENT_SECRET = process.env.INSTAMOJO_CLIENT_SECRET;
 router.post("/register_team", (req, res) => {
   // console.log(req.cookies['email']);
   console.log(req.body);
-  Register.findOne({ email: req.cookies["email"] })
-    .then(reg => {
-      if (reg) {
-        // already have this user
-        // console.log('user is: ', currentUser);
-        Register.updateOne(
-          { email: req.cookies["email"] },
-          req.body,
-          { upsert: true },
-          function(err, data) {
-            if (err) return res.status(500).send({ error: err });
+  if(req.cookies["email"]){
+    Register.findOne({ email: req.cookies["email"] })
+      .then(reg => {
+        if (reg) {
+          // already have this user
+          // console.log('user is: ', currentUser);
+          Register.updateOne(
+            { email: req.cookies["email"] },
+            req.body,
+            { upsert: true },
+            function(err, data) {
+              if (err) return res.status(500).send({ error: err });
+              Register.findOneAndUpdate(
+                { email: req.cookies["email"] },
+                { $set: { registered: true } }
+              )
+                .then(user =>
+                  res.send("successfully updated registration: " + user)
+                )
+                .catch(errors =>
+                  res.send("error occurred during registration: " + errors)
+                );
+            }
+          );
+        } else {
+          // if not, create user in our db
+          new Register(req.body).save().then(newReg => {
             Register.findOneAndUpdate(
               { email: req.cookies["email"] },
-              { $set: { registered: true } }
+              { $set: { registered: true } },
+              { new: true }
             )
               .then(user =>
                 res.send("successfully updated registration: " + user)
@@ -35,30 +52,17 @@ router.post("/register_team", (req, res) => {
               .catch(errors =>
                 res.send("error occurred during registration: " + errors)
               );
-          }
-        );
-      } else {
-        // if not, create user in our db
-        new Register(req.body).save().then(newReg => {
-          Register.findOneAndUpdate(
-            { email: req.cookies["email"] },
-            { $set: { registered: true } },
-            { new: true }
-          )
-            .then(user =>
-              res.send("successfully updated registration: " + user)
-            )
-            .catch(errors =>
-              res.send("error occurred during registration: " + errors)
-            );
-        });
-      }
-    })
-    .catch(err => {
-      console.error(err);
+          });
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        res.redirect("/register");
+      });
+    }else{
       res.redirect("/register");
-    });
-});
+    }
+  });
 
 router.get("/reg", (req, res) => {
   var p=req.query.p ||'all';

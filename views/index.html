@@ -121,10 +121,27 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-1 promo-info">
-                                <img class="img-responsive animated slideInUp wow" src="/img/hackman4black.jpeg" alt="logo">
+                                <img class="img-responsive animated slideInUp wow" src="/img/hackman4black.jpeg" alt="logo" id="main_logo">
                                 <p>November 9th|10th 2K19<br><br> <b style="color:#fff">eat(); &nbsp;&nbsp; code(); &nbsp;&nbsp; coffee(); &nbsp;&nbsp; repeat();</b></p>
-                                <a href="/auth/google" class="btn-u btn-banner btn-apple"><i class="fa fa-edit fa-2x"></i>REGISTER<br></a>                               
+                                <a href="/auth/google" id="login_btn" class="btn-u btn-banner hidden btn-apple"><i class="fa fa-edit fa-2x"></i>REGISTER<br></a>                               
                             </div>
+                        </div>
+                        <div class="container hidden animated slideInDown wow" id="countdown">
+                            <div class="row" id="counter">
+                                <div class="col-md-2 col-sm-3 col-xs-4 ">
+                                    <span class="hours"></span>
+                                    <div class="smalltext">Hours</div>
+                                </div>
+                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                    <span class="minutes"></span>
+                                    <div class="smalltext">Minutes</div>
+                                </div>
+                                <div class="col-md-2 col-sm-3 col-xs-4">
+                                    <span class="seconds"></span>
+                                    <div class="smalltext">Seconds</div>
+                                </div><br>
+                            </div><br>
+                            <h4 style="color:#33cc33;" id="live">Hackman is Live</h4>
                         </div>
                         <!--
                             <div class="col-md-6 col-sm-12 col-xs-12 banner-img overflow-h">
@@ -777,6 +794,64 @@
                 });
             </script> -->
             <!--[if lt IE 10]>
-            <script src="/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+            <script src="/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>-->
+          <script>
+                // $(window).on("load", function () {
+                  $.ajax({url: "/getStartTime", success: function(result){
+                    console.log(result["start_time"])
+                    if(result["start_time"]==null || result["start_time"]==""){
+                      $('#login_btn').removeClass('hidden');
+                      return
+                    }
+                    var deadline = new Date(Date.parse(new Date(result["start_time"])) + 24* 60 * 60 * 1000);  
+                    // var deadline = new Date(Date.parse(new Date()) + 10 * 1000);           
+                    if(new Date() < deadline){
+                      $('#login_btn').addClass('hidden');
+                      $('#countdown').removeClass('hidden');
+                      $([document.documentElement, document.body]).animate({
+                          scrollTop: $("#main_logo").offset().top
+                      }, 2000);
+                      initializeClock('counter', deadline);
+                    }
+                  }});
+                  
+                // });
+           
+                function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                return {
+                    'total': t,
+                    'days': days,
+                    'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds
+                };
+                }
+                function initializeClock(id, endtime) {
+                    var clock = document.getElementById(id);
+                    var hoursSpan = clock.querySelector('.hours');
+                    var minutesSpan = clock.querySelector('.minutes');
+                    var secondsSpan = clock.querySelector('.seconds');
+    
+                    function updateClock() {
+                        var t = getTimeRemaining(endtime);
+                        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    
+                        if (t.total === 0) {
+                          $('#countdown').addClass('hidden');
+                          clearInterval(timeinterval);
+                        }
+                    }
+    
+                    updateClock();                
+                    var timeinterval = setInterval(updateClock, 1000);
+                }
+            </script>
         </body>
     </html>

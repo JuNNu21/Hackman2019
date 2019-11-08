@@ -5,7 +5,7 @@
     <!--[if !IE]><!-->
     <html lang="en">
         <head>
-            <title>Hackman 2k18</title>
+            <title>Hackman v4</title>
             <!-- Meta -->
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -13,7 +13,7 @@
             <meta name="description" content="Hackman is an annual 24-hour hackathon. After a successful iteration of Hackman, Hackman 2.0 is back! Our theme is Open Hack. The future is data-driven. So get your fingers set on the keyboards & hack it out on the 4th & 5th of November, 2017.">
             <meta name="author" content="">
             <!-- Favicon -->
-            <link rel="shortcut icon" href="/img/hackman3head.jpeg">
+            <link rel="shortcut icon" href="/img/hackman4header.jpeg">
             <!-- Web Fonts -->
             <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=cyrillic,latin">
             <!-- CSS Global Compulsory -->
@@ -39,7 +39,7 @@
             <!-- CSS Customization -->
             <link rel="stylesheet" href="/css/custom.css">
         </head>
-        <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+        <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery" style="background:#000">
             <!-- Header -->
             <nav class="one-page-header navbar navbar-default navbar-fixed-animate homeapp-header" data-role="navigation">
                 <div class="container">
@@ -52,7 +52,7 @@
                         </button>
 <!--                    <a class="navbar-brand" href="https://hackman3.glitch.me">\ -->
                         <a class="navbar-brand" href="https://hackman.in">
-                        <img src="/img/hackman3logo.jpeg" alt="Logo">
+                        <img src="/img/hackman4logo.jpg" alt="Logo">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -77,8 +77,8 @@
             <!-- Registration -->
             <br><br><br><br><br><br>
             <section>
-                <div class="container">
-                    <a id="inaugrate_btn" class="btn-u btn-banner btn-apple"><i class="fa fa-clock-o fa-2x"></i>Inaugrate<br>
+                <div class="container" style="height:100vh">
+                    <a id="inaugrate_btn"  href="starttimer" class="btn-u btn-banner btn-apple" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);"><i class="fa fa-clock-o fa-2x"></i>Inaugrate<br>
                         <span>Countdown</span></a>
                             <div class="container hidden" id="countdown">
                                 <div class="row" id="counter">
@@ -167,6 +167,18 @@
                 });
             </script> -->
             <script>
+                // $(window).on("load", function () {
+                  $.ajax({url: "/getStartTime", success: function(result){
+                    console.log(result["start_time"])
+                    var deadline = new Date(Date.parse(new Date(result["start_time"])) + 24* 60 * 60 * 1000);            
+                    if(new Date() < deadline){
+                      $('#inaugrate_btn').addClass('hidden');
+                      $('#countdown').removeClass('hidden');
+                      initializeClock('counter', deadline);
+                    }
+                  }});
+                  
+                // });
            
                 function getTimeRemaining(endtime) {
                 var t = Date.parse(endtime) - Date.parse(new Date());
@@ -202,10 +214,12 @@
                     updateClock();                
                     var timeinterval = setInterval(updateClock, 1000);
                 }
+                
+                
     
                 $('#inaugrate_btn').on('click',function(){
                     $(this).addClass('hidden');
-                    $('#countdown').removeClass('hidden');
+                    // $('#countdown').removeClass('hidden');
                     var deadline = new Date(Date.parse(new Date()) + 24* 60 * 60 * 1000);            
                     initializeClock('counter', deadline);
                 });

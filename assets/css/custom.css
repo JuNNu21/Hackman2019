@@ -29,8 +29,8 @@ hr.style13 {
     display: flex;
     justify-content:center;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 25px;
+/*     margin-bottom: 10px; */
 }
 
 #counter > div{
@@ -41,6 +41,19 @@ hr.style13 {
     color: white;
     display: block;
     overflow:initial
+}
+#counter > div:before {
+  background: none;
+  border: 1px solid #000;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  pointer-events: none;
 }
 
 #counter div > span{
@@ -53,4 +66,50 @@ hr.style13 {
 #inaugrate_btn{
     margin:auto;
     display:block;
+}
+
+@-webkit-keyframes pulsate  {
+   0% {
+        transform: scale(1,1);
+   }
+   50% {
+        transform: scale(2,2);
+   }
+   100%{
+        transform: scale(1,1);
+   }
+}
+
+@keyframes pulsate  {
+   0% {
+        transform: scale(1,1);
+   }
+   50% {
+        transform: scale(2,2);
+   }
+   100%{
+        transform: scale(1,1);
+   }
+}
+/* @-webkit-keyframes zoomout {
+    from {
+    	-webkit-transform: scale(2,2);
+    }
+    to {
+    	-webkit-transform: scale(1,1);
+    }
+}
+
+@keyframes zoomout {
+   from {
+        transform: scale(2,2);
+   }
+   to {
+        transform: scale(1,1);
+   }
+} */
+
+
+#live {
+  animation: pulsate  3s linear infinite 2s;
 }

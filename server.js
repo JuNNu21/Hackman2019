@@ -37,12 +37,16 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/closed', function(req, res) {
+  res.sendFile(__dirname + '/views/closed.html');
+});
 // register route
 app.get('/register',async function(req, res) {
   var active= await Config.findOne({_id:"5dad9bded6ab701d57cab8ad"})
   // console.log(active.toJSON().active)
   if(!active.toJSON().active){
-    res.sendFile(__dirname + '/views/closed.html');
+    // res.sendFile(__dirname + '/views/closed.html');
+    return res.redirect("/closed");
   }
   if(req.cookies['email']){
     console.log(req.cookies['email']);
@@ -52,9 +56,40 @@ app.get('/register',async function(req, res) {
     res.redirect("/");
   }
 });
-app.get('/closed', function(req, res) {
-  res.sendFile(__dirname + '/views/closed.html');
+
+app.get("/starttimer",(req,res)=>{
+  var now= Date.now();
+  Config.findOneAndUpdate({_id:"5dad9bded6ab701d57cab8ad"},{start_time:now},{new:true},(err,doc)=>{
+    if(err){
+      console.log("Start Timer Error:", err)
+      res.send("Error")
+    }else{
+      res.redirect("/")
+    }
+  })
 });
+app.get("/resettimer",(req,res)=>{
+  // var now= Date.now();
+  Config.findOneAndUpdate({_id:"5dad9bded6ab701d57cab8ad"},{start_time:""},{new:true},(err,doc)=>{
+    if(err){
+      console.log("Start Timer Error:", err)
+      res.send("Error")
+    }else{
+      res.redirect("/")
+    }
+  })
+});
+app.get("/getStartTime",(req,res)=>{
+  Config.findOne({_id:"5dad9bded6ab701d57cab8ad"},{start_time:1},(err,doc)=>{
+    if(err){
+      console.log(err)
+    }
+    else{
+      res.json(doc);
+    }
+  })
+});
+
 
 // coc route
 app.get('/coc', function(req, res) {

@@ -332,16 +332,19 @@
                   
                     //validation
                     if(data['team-name']=="" || data['team-size']==""){
-                     alert("Please fill team name and team size"); 
+                     alert("Please fill team name and team size");
+                     $('#register-button').prop('disabled', false);
                      return;
                     }
                     if(data['team-leader-name']=="" || data['team-leader-email']=="" || data['team-leader-phone']=="" || data['team-leader-college']==""){
-                     alert("Please fill all the details of team leader"); 
+                     alert("Please fill all the details of team leader");
+                     $('#register-button').prop('disabled', false);
                      return;
                     }
                     for(i=2;i<=data['team-size'];i++){
                       if(data['team-member-'+i+'-name']=="" || data['team-member-'+i+'-email']=="" || data['team-member-'+i+'-phone']=="" || data['team-member-'+i+'-college']==""){
                          alert("Please fill all the details of team member"+ i); 
+                         $('#register-button').prop('disabled', false);
                          return;
                       }
                     }

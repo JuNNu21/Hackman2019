@@ -40,6 +40,9 @@ app.get('/', function(req, res) {
 app.get('/closed', function(req, res) {
   res.sendFile(__dirname + '/views/closed.html');
 });
+app.get('/event-flow', function(req, res) {
+  res.sendFile(__dirname + '/views/event-flow.html');
+});
 // register route
 app.get('/register',async function(req, res) {
   var active= await Config.findOne({_id:"5dad9bded6ab701d57cab8ad"})
